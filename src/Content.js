@@ -1,15 +1,26 @@
-const Content = ({ list }) => {
-  const listItems = list.map((item) => 
-    <li key={item.id}>{JSON.stringify(item)}</li>
-  );
+import Record from "./Record";
+
+const Content = ({ data }) => {
+  const columns = Object.keys(data[0]);
 
   return (
-    <main>
-      <ul>{listItems}</ul>
-    </main>
+    <table>
+      <thead>
+        <tr>{columns.map((col) => (
+          <th key={col}>{col.charAt(0).toUpperCase() + col.slice(1)}</th>
+        ))}</tr>
+      </thead>
+      <tbody>
+        {data.map((datum) => (
+          <Record
+            key={datum.id}
+            columns={columns}
+            data={datum}
+          />
+        ))}
+      </tbody>
+    </table>
   )
 }
-
-// JSON.stringify(listItem)
 
 export default Content;

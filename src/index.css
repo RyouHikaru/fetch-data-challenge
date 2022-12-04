@@ -22,11 +22,25 @@ button {
 }
 
 main {
-  padding: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 li {
   padding: 1rem 0;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table {
+  word-wrap: normal;
+}
+
+th, td {
+  padding: 0.2rem;
 }
 
 .active {

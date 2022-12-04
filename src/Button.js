@@ -1,12 +1,13 @@
 import { useState } from "react";
 
-const Button = ({ handleToggle, isActive, name }) => {
+const Button = ({ text, source, setSource }) => {
 	return (
 		<button
 			type="button"
-			onClick={() => handleToggle(name)}
-			className={ isActive ? 'active' : '' }
-		>{name}</button>
+			onClick={() => setSource(text)}
+			className={ text === source ? 'active' : null }
+		>{text.charAt(0).toUpperCase() + text.slice(1)}
+		</button>
 	)
 }
 

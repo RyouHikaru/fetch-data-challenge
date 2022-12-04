@@ -1,22 +1,22 @@
 import Button from "./Button";
 
-const Header = ({ btnStates, handleToggle }) => {
+const Header = ({ source, setSource }) => {
 	return (
 		<header>
 			<Button
-				isActive={btnStates["users"]}
-				handleToggle={handleToggle}
-				name={"users"}
+				text="users"
+				source={source}
+				setSource={setSource}
 			/>
 			<Button
-				isActive={btnStates["posts"]}
-				handleToggle={handleToggle}
-				name={"posts"}
+				text="posts"
+				source={source}
+				setSource={setSource}
 			/>
 			<Button
-				isActive={btnStates["comments"]}
-				handleToggle={handleToggle}
-				name={"comments"}
+				text="comments"
+				source={source}
+				setSource={setSource}
 			/>
 		</header>
 	)
