@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const Button = ({ text, source, setSource }) => {
 	return (
 		<button

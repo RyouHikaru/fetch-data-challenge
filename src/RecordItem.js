@@ -1,5 +1,4 @@
 const RecordItem = ({ column, data }) => {
-  const objKeys = [];
 
   const formattedData = () => {
     if (column === 'address')
